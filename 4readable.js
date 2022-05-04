@@ -23,11 +23,11 @@ class myReadable extends Readable {
 
 const counter = new myReadable({ highWaterMark: 2}); //, encoding: "utf8"
 
-console.log(`Received: ${counter.read()}`);
+// console.log(`Received: ${counter.read()}`);
 
-// counter.on('data', chunk => {
-//   console.log(`Received: ${chunk.toString()}`);
-// });
+counter.on('data', chunk => {
+  console.log(`Received: ${chunk.toString()}`);
+});
 
 
 

@@ -15,7 +15,7 @@ class Counter extends Writable {
 const counter = new Counter({ highWaterMark: 2} ); //, encoding: "utf8"
 //counter.setDefaultEncoding("utf8")
 (async () => {
-  const arr = [1, 2, 3, 23, 74, 153, 888]
+  const arr = [1, 2, 3, 23, 74, 153, 888];
   for (let i of arr) {
     const canWrite = counter.write(Buffer.from(`${i}`, 'utf8'));
 
